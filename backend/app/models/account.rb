@@ -1,6 +1,6 @@
 class Account < ApplicationRecord
-  validates :account_name, presence: true, uniqueness: true
-  validates :account_number, presence: true, uniqueness: true
+  validates :name, presence: true, uniqueness: true
+  validates :number, presence: true, uniqueness: true
 
   validates :balance, numericality: {
     only_integer: true,
