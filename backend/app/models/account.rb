@@ -9,4 +9,10 @@ class Account < ApplicationRecord
   }
 
   has_many :expenses, dependent: :destroy
+
+  after_commit :set_balance_to_1000, on: :create
+
+  def set_balance_to_1000
+    self.balance = 1000
+  end
 end
