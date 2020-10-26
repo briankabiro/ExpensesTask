@@ -20,7 +20,9 @@ class ExpensesController < ApplicationController
 
   def update
     expense = Expense.find(params[:id])
-    expense.update!(expense_params)
+
+    Expenses::UpdateService.new(expense, expense_params).execute
+
     render json: expense
   end
 
