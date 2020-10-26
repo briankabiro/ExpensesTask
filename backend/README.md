@@ -1,24 +1,28 @@
 # README
+## Setup
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. Clone the repository
 
-Things you may want to cover:
+    ``` git clone git@github.com:briankabiro/ExpensesTask.git ```
 
-* Ruby version
+2. Cd into the project
 
-* System dependencies
+    ``` cd ExpensesTask ```
 
-* Configuration
+3. Move into the backend directory
 
-* Database creation
+    ``` cd backend && bundle install```
 
-* Database initialization
 
-* How to run the test suite
+## Running Tests
+The tests are housed in the *spec* directory. 
 
-* Services (job queues, cache servers, search engines, etc.)
+The tests can be run using:
 
-* Deployment instructions
+```rspec```
 
-* ...
+## Improvements
+Here is a list of improvements that I would have made with more time:
+
+- Add a constraint that account number must not be less than 5 and not more than 256 chars.
+- use optimistic locking so that two expenses are not assigned to one 
