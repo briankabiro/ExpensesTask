@@ -15,6 +15,7 @@ class ExpensesController < ApplicationController
 
   def create
     expense = Expense.create!(expense_params)
+
     render json: expense
   end
 
@@ -34,6 +35,6 @@ class ExpensesController < ApplicationController
   private
 
   def expense_params
-    params.permit(:amount, :date, :description)
+    params.require(:expense).permit(:amount, :date, :description, :account)
   end
 end
